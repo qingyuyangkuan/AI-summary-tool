@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 文摘总结助手</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI 文摘总结助手</h1>
+      <p class="subtitle">一键提炼文章核心要点，高效阅读从这里开始</p>
+    </header>
+
+    <section class="intro">
+      <h2>工具介绍</h2>
+      <p>
+        本工具基于先进的大语言模型，能够快速分析长文内容，提取关键信息、核心观点和逻辑结构，
+        生成简洁、准确的总结。支持中英文文章，适合学习、工作、研究等场景使用。
+      </p>
+      <ul>
+        <li>支持长文本输入（建议不超过 8000 字）</li>
+        <li>自动识别文章主题与要点</li>
+        <li>输出结构清晰、易于阅读的总结</li>
+        <li>API Key 通过 Netlify Functions 安全隐藏</li>
+      </ul>
+    </section>
+
+    <section class="input-area">
+      <label for="article">粘贴文章内容：</label>
+      <textarea
+        id="article"
+        placeholder="请在此处粘贴需要总结的文章内容..."
+        rows="12"
+      ></textarea>
+      <button id="summarizeBtn">生成总结</button>
+    </section>
+
+    <section class="result-area">
+      <h2>总结结果</h2>
+      <div id="result" class="result-box">
+        <p class="placeholder">总结结果将显示在这里...</p>
+      </div>
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <span>正在生成总结，请稍候...</span>
+      </div>
+    </section>
+
+    <footer>
+      <p>Powered by OpenAI Compatible API · 部署于 Netlify</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
